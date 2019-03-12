@@ -38,3 +38,10 @@ module.exports.signup = (req,res,next) => {
         }
     })
 } 
+
+module.exports.upload = (req,res,next) => {
+   
+    
+
+    next();
+} 
