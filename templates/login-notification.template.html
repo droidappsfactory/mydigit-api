@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+  <title>My Digit Feebback</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <style type="text/css">
+    body {
+        font-family: 'Roboto', sans-serif;
+        height: 100vh;
+        width: 100vw;
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        background-color: whitesmoke;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main_div{
+        
+        align-self: center;
+        width: 80vw;
+        background-color: black;
+        height: 80vh;
+    }
+
+    .button {
+      font-family: Helvetica, Arial, sans-serif;
+      color: #ffffff !important;
+      background-color: #0082f0;
+      border: 1px solid #0082f0;
+      min-width: 60px;
+      padding: 0.3em 1em;
+      border-radius: 3px;
+      outline: 0;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      color: #ffffff !important;
+      background-color: #3ea6ff;
+      border: 1px solid #3ea6ff;
+    }
+    h1{
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="main_div">
+        <h1>My Digit Feedback</h1>
+        <p>Hej {{user}}</p>
+        <p>
+          You have just gone through mydigit website. I would love to hear feedback on
+          my resume, skills, technologies.
+        </p>
+        <p>
+          Please be free to leave your comments. Remarks are much appreciated as there
+          is always scope to learn new.
+        </p>
+        <a href="http://localhost:4200/feedback" class="button">Feedback</a>
+
+  </div>  
+  
+</body>

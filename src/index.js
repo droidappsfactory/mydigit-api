@@ -3,6 +3,7 @@ const cronJob = require("./config/image-cron");
 require("dotenv").config();
 var mongoose = require("mongoose");
 var mailer = require("./config/mailer");
+var mustache = require('mustache');
 
 const port = process.env.PORT || 8000;
 console.log("Port ", port);
@@ -20,11 +21,20 @@ mongoose.connect(uristring, { useNewUrlParser: true }, function(err, res) {
   }
 });
 
-mailer.sgMail.send(mailer.msg).then(data=>{
-  console.log('data');
-});
+// check for proxy if present.It wont work if there is one.
+// mailer.sgMail.send(mailer.msg).then(data=>{
+//   console.log('data');
+// });
 
-cronJob.start();
+// starting cron jobs 
+// cronJob.start();
+
+// mustache testing
+
+// var user = 'rishi';
+// var output =  mustache.render("{{user}} says hello", {user});
+// console.log('Output of mustache ', output);
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

@@ -11,6 +11,7 @@ const app = express();
 
 // serving images in uploads folder
 app.use('/static', express.static('uploads'));
+app.use('/tmp', express.static('templates'));
 
 // parse body params and attach them to req.body
 app.use(express.json());

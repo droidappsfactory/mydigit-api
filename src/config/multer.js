@@ -8,7 +8,7 @@ var mkdir = util.promisify(fs.mkdir);
 Promise.resolve().
     then(()=> mkdir('uploads')).
     then(() => console.log('Created uploads folder')).
-    catch((e) => console.log('error msg',e));
+    catch((e) => { console.log('error msg',e); });
 
 
 var storage = multer.diskStorage({

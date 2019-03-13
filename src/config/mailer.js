@@ -1,6 +1,6 @@
 // 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
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 module.exports.msg = {
   to: 'email2rishi13@gmail.com',
   from: 'mydigit@gmail.com',
