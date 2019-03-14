@@ -46,8 +46,8 @@ Thumbs.db
 /uploads
 
 # npmrc for proxy only
-/.npmrc
+.npmrc
 
-/.env
+.env
 
 package-lock.json
