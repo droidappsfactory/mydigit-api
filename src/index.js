@@ -5,8 +5,11 @@ var mongoose = require("mongoose");
 var mailer = require("./config/mailer");
 var mustache = require('mustache');
 
+var debug = require('debug')('http');
+
+
 const port = process.env.PORT || 8000;
-console.log("Port ", port);
+debug('Port number', port);
 
 var uristring =
   process.env.MONGOLAB_URI ||

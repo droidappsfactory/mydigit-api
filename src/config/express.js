@@ -3,6 +3,8 @@ const cors = require('cors');
 const routes = require('../api/routes');
 const path = require('path');
 
+const error = require('../api/middlewares/error');
+
 /** 
  * Express instance
  * @public
@@ -23,6 +25,9 @@ app.use(cors());
 // mount api v1 routes
 app.use('/v1',routes);
 
+// error handler, send stacktrace only during development
+app.use(error.handler);
 
+app.use(error.notFound);
 
 module.exports = app;

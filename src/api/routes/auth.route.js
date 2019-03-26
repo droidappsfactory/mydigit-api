@@ -5,7 +5,9 @@ const multer = require("../../config/multer");
 const authValidation = require("../validations/authentication");
 const authController = require("../controllers/auth.controller");
 
-router.route("/login").post(authValidation.login, authController.checkUser);
+const authenticated = require('../middlewares/authenticated');
+
+router.route("/login").post(authenticated,authValidation.login, authController.checkUser);
 router.route("/signup").post(authValidation.signup, authController.signupUser);
 router
   .route("/upload")

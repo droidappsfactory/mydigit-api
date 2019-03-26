@@ -8,11 +8,13 @@ module.exports.getposts = (req,res,next) => {
 
     Joi.validate(req.body, schema ,(err,value)=>{
         if(err){
-            res.status(422).json({
-                status: 'error',
-                message: 'Invalid request data',
-                data: req.body
-            })
+            // res.status(422).json({
+            //     status: 'error',
+            //     message: 'Invalid request data',
+            //     data: req.body
+            // })
+
+            next(err);
         } else {
             next();
         }
